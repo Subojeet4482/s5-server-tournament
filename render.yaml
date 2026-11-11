@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: ff-server5-fraud
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: SERVER_ID
+        sync: false
+      - key: DB3_FIREBASE_CREDENTIALS_B64
+        sync: false
+      - key: S1_URL
+        sync: false
+      - key: S4_URL
+        sync: false
+      - key: ADMIN_API_KEY
+        sync: false
+      - key: FRAUD_ACTION
+        sync: false
+      - key: MAX_ACCOUNTS_PER_DEVICE
+        sync: false
+      - key: MAX_ACCOUNTS_PER_IP
+        sync: false
+      - key: AUTO_BAN_WINDOW_DAYS
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: INTERNAL_KEY
+        sync: false
+      - key: REQUIRE_LB
+        sync: false
+      - key: KEEPALIVE
+        sync: false
+      - key: KEEPALIVE_INTERVAL
+        sync: false
+      - key: THREADS
+        sync: false
